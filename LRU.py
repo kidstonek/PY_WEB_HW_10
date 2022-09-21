@@ -1,6 +1,7 @@
 import redis
 from redis_lru import RedisLRU
 from datetime import datetime
+from timeit import timeit
 
 client = redis.StrictRedis(host="localhost", port=6379, password=None)
 cache = RedisLRU(client, max_size=256)
